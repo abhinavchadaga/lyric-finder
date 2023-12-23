@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/abhinavchadaga/lyric-finder-server.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/abhinavchadaga/lyric-finder-frontend.git
