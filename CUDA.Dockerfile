@@ -47,13 +47,13 @@ RUN adduser \
 WORKDIR /app
 
 ## Copy executable and db file from builder stage
-COPY --from=cuda_builder /app/Release/lyric-finder-server /app/Release/lyric-finder-server
+COPY --from=cuda_builder /app/Release/parallel-lyric-finder-server /app/Release/parallel-lyric-finder-server
 COPY --from=cuda_builder /app/db/ /app/db/
 COPY --from=frontend_builder /app/frontend/dist /app/dist/
 
 # Set permissions
-RUN chown appuser:appuser /app/Release/lyric-finder-server && \
-    chmod +x /app/Release/lyric-finder-server
+RUN chown appuser:appuser /app/Release/parallel-lyric-finder-server && \
+    chmod +x /app/Release/parallel-lyric-finder-server
 
 USER appuser
 
@@ -62,4 +62,4 @@ EXPOSE 8000
 WORKDIR /app/Release/
 
 # Set the entrypoint to your application executable
-ENTRYPOINT ["/app/Release/lyric-finder-server"]
+ENTRYPOINT ["/app/Release/parallel-lyric-finder-server"]

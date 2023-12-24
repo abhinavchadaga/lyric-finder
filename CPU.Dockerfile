@@ -44,12 +44,12 @@ RUN adduser \
 
 WORKDIR /app
 
-COPY --from=cpp_builder /app/Release/lyric-finder-server /app/Release/lyric-finder-server
+COPY --from=cpp_builder /app/Release/parallel-lyric-finder-server /app/Release/parallel-lyric-finder-server
 COPY --from=cpp_builder /app/db/ /app/db/
 COPY --from=frontend_builder /app/frontend/dist /app/dist/
 
-RUN chown appuser:appuser /app/Release/lyric-finder-server && \
-    chmod +x /app/Release/lyric-finder-server
+RUN chown appuser:appuser /app/Release/parallel-lyric-finder-server && \
+    chmod +x /app/Release/parallel-lyric-finder-server
 
 USER appuser
 
@@ -57,4 +57,4 @@ EXPOSE 8000
 
 WORKDIR /app/Release/
 
-ENTRYPOINT ["/app/Release/lyric-finder-server"]
+ENTRYPOINT ["/app/Release/parallel-lyric-finder-server"]
