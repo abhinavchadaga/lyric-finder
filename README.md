@@ -14,23 +14,24 @@ When tested on a standard Ubuntu Linux desktop workstation, the CUDA implementat
 
 ## Running the application
 
+### CMake
+
+This application is built using CMake. Use the commands below to build from scratch.
+
+Run the following in `backend/`: \
+`mkdir build && cd build`\
+`cmake -DCMAKE_BUILD_TYPE=Release -G Ninja ..` (can use make instead of ninja)\
+`cmake --build .`\
+`./lyric-finder-server [-g enable cuda support] [-t number of threads to use if not using cuda]`
+
 ### In Docker
 
-This application can be run by building the appropriate docker image (based on the hardware being used to run the app) and starting a container.
+To use build the appropriate docker image and run, use the instructions below:
 
 To build and run the cpu-only image, run the following in `backend/`: \
 `docker build -f CPU.Dockerfile -t lyric-finder-sever-cpu .`\
-`docker run -p 8000:8000 lyric-finder-sever-cpu`
+`docker run -p 8000:8000 lyric-finder-sever-cpu [args]`
 
 To build and run the CUDA supported image, run the following in `backend/`: \
 `docker build -f CUDA.Dockerfile -t lyric-finder-sever-gpu .`\
-`docker run --gpus all -p 8000:8000 lyric-finder-sever-gpu`
-
-### CMake
-
-This application can also be run using CMake.
-
-To build the application, run the following in `backend/`: \
-`cmake -B build -DCMAKE_BUILD_TYPE=Release -G Ninja .`\
-`cmake --build ..`\
-`./build/lyric-finder-server`
+`docker run --gpus all -p 8000:8000 lyric-finder-sever-gpu [args]`
