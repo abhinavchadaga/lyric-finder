@@ -6,6 +6,8 @@ The frontend is written in React and TypeScript and uses the [Mantine](https://m
 
 The backend is written in C++20 and CUDA and is built using CMake. The application is served using the [oat++](https://oatpp.io) web framework.
 
+The underlying database of songs was scraped from [lyricsdepot](http://www.lyricsdepot.com) using ScraPy + some additional postprocessing. It's stored as a json lines file and loaded in as an in-memory database. The database contains 300,000+ songs.
+
 ## Demo
 
 https://github.com/abhinavchadaga/lyric-finder/assets/48454518/5327195a-d69d-4eb8-831e-42a911aaef33
