@@ -6,6 +6,10 @@ The frontend is written in React and TypeScript and uses the [Mantine](https://m
 
 The backend is written in C++20 and CUDA and is built using CMake. The application is served using the [oat++](https://oatpp.io) web framework.
 
+## Demo
+
+https://github.com/abhinavchadaga/lyric-finder/assets/48454518/5327195a-d69d-4eb8-831e-42a911aaef33
+
 ## Search Engine implementations
 
 This project was originally written to explore the use of parallelization in improving the map-reduce paradigm. The backend can be initialized using one of three search-engines: a sequential, cpu implementation, a thread-parallel implementation that uses STL threads, and a CUDA implementation.
