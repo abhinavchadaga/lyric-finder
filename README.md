@@ -12,23 +12,21 @@ This project was originally written to explore the use of parallelization in imp
 
 When tested on a standard Ubuntu Linux desktop workstation, the CUDA implementation is the fastest (and most consistent performer) followed by the STL thread-parallel implementation. The sequential implementation is understandably last.
 
-## Running the application
+## Building and running the application
 
-### CMake
+Lyric-Finder is built using CMake. Use docker to build and run the application.
 
-This application is built using CMake. Use the commands below to build from scratch.
-
-Run the following in `backend/`: \
-`mkdir build && cd build`\
-`cmake -DCMAKE_BUILD_TYPE=Release -G Ninja ..` (can use make instead of ninja)\
-`cmake --build .`\
-`./lyric-finder-server [-g enable cuda support] [-t number of threads to use if not using cuda]`
+The `lyric-finder-server` executable supports the following command line arguments: \
+| Argument | Description |
+| -------- | ----------- |
+| `-g` | Selects the CUDA search engine if available. |
+| `-t [number]` | Number of threads to use for the STL thread-parallel search engine. 0 uses a sequential implementation with no threads. |
 
 ### In Docker
 
-To use build the appropriate docker image and run, use the instructions below:
+To use build the appropriate docker image and run, use the instructions below. Note, the server runs on port 8000:
 
-To build and run the cpu-only image, run the following in `backend/`: \
+To build and run the cpu-only image, run the following in the root directory: \
 `docker build -f CPU.Dockerfile -t lyric-finder-sever-cpu .`\
 `docker run -p 8000:8000 lyric-finder-sever-cpu [args]`
 
