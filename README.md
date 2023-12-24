@@ -1,6 +1,6 @@
-# Lyric-Finder
+# Parallel-Lyric-Finder
 
-Lyric-Finder is a full-stack web application that allows users to search for songs containing a particular lyric. 
+Parallel-Lyric-Finder is a full-stack web application that allows users to search for songs containing a particular lyric. 
 
 The front end is written in React and TypeScript and uses the [Mantine](https://mantine.dev/getting-started/) component library. 
 
@@ -20,7 +20,7 @@ When tested on a standard Ubuntu Linux desktop workstation, the CUDA implementat
 
 ## Building and running the application
 
-Lyric-Finder is built using CMake. Use docker to build and run the application.
+Parallel-Lyric-Finder is built using CMake. Use docker to build and run the application.
 
 The `lyric-finder-server` executable supports the following command line arguments: \
 | Argument | Description |
@@ -33,9 +33,9 @@ The `lyric-finder-server` executable supports the following command line argumen
 To use build the appropriate docker image and run, use the instructions below. Note, the server runs on port 8000:
 
 To pull and run the cpu-only image: \
-`docker pull abhinavchadaga/lyric-finder:cpu-ubuntu2204`\
-`docker run -p 8000:8000 abhinavchadaga/lyric-finder:cpu-ubuntu2204 [args]`
+`docker pull abhinavchadaga/parallel-lyric-finder:cpu-ubuntu2204`\
+`docker run -p 8000:8000 abhinavchadaga/parallel-lyric-finder:cpu-ubuntu2204 [args]`
 
 To pull and run the CUDA supported image: \
-`docker pull abhinavchadaga/lyric-finder:cuda-11.7`\
-`docker run --gpus all -p 8000:8000 abhinavchadaga/lyric-finder:cuda-11.7 [args]`
+`docker pull abhinavchadaga/parallel-lyric-finder:cuda-11.7`\
+`docker run --gpus all -p 8000:8000 abhinavchadaga/parallel-lyric-finder:cuda-11.7 [args]`
