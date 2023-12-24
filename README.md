@@ -30,10 +30,10 @@ The `lyric-finder-server` executable supports the following command line argumen
 
 To use build the appropriate docker image and run, use the instructions below. Note, the server runs on port 8000:
 
-To build and run the cpu-only image, run the following in the root directory: \
+To pull and run the cpu-only image: \
 `docker pull abhinavchadaga/lyric-finder:cpu-ubuntu2204`\
 `docker run -p 8000:8000 abhinavchadaga/lyric-finder:cpu-ubuntu2204 [args]`
 
-To build and run the CUDA supported image, run the following in `backend/`: \
+To pull and run the CUDA supported image: \
 `docker pull abhinavchadaga/lyric-finder:cuda-11.7`\
 `docker run --gpus all -p 8000:8000 abhinavchadaga/lyric-finder:cuda-11.7 [args]`
