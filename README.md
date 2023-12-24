@@ -1,12 +1,12 @@
 # Lyric-Finder
 
-This project allows a user to enter a song lyric and display a list of songs that contain that lyric.
+Lyric-Finder is a full-stack web application that allows users to search for songs containing a particular lyric. 
 
-The frontend is written in React and TypeScript and uses the [Mantine](https://mantine.dev) component library.
+The front end is written in React and TypeScript and uses the [Mantine](https://mantine.dev/getting-started/) component library. 
 
-The backend is written in C++20 and CUDA and is built using CMake. The application is served using the [oat++](https://oatpp.io) web framework.
+The backend is written in C++20 and CUDA and is built using CMake. The application is served using the [oat++](https://oatpp.io) web framework. 
 
-The underlying database of songs was scraped from [lyricsdepot](http://www.lyricsdepot.com) using ScraPy + some additional postprocessing. It's stored as a json lines file and loaded in as an in-memory database. The database contains 300,000+ songs.
+The underlying database of songs was scraped from [lyricsdepot](http://www.lyricsdepot.com) using ScraPy + some additional postprocessing. It's stored as a JSON lines file and loaded into an in-memory database. The database contains 300,000+ songs.
 
 ## Demo
 
