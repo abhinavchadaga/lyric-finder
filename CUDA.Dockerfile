@@ -20,7 +20,7 @@ RUN apt-get update && \
 
 # copy source code
 WORKDIR /app
-COPY . .
+COPY backend/ .
 
 # Build the application
 RUN mkdir Release && \
