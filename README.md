@@ -14,7 +14,7 @@ https://github.com/abhinavchadaga/lyric-finder/assets/48454518/5327195a-d69d-4eb
 
 ## Search Engine implementations
 
-This project was originally written to explore the use of parallelization in improving the map-reduce paradigm. The backend can be initialized using one of three search-engines: a sequential, cpu implementation, a thread-parallel implementation that uses STL threads, and a CUDA implementation.
+This project was originally written to explore the use of parallelization for improving the performance of the map-reduce paradigm. The backend can be initialized using one of three search-engines: a sequential, cpu implementation, a thread-parallel implementation that uses STL threads, and a CUDA implementation.
 
 When tested on a standard Ubuntu Linux desktop workstation, the CUDA implementation is the fastest (and most consistent performer) followed by the STL thread-parallel implementation. The sequential implementation is understandably last.
 
